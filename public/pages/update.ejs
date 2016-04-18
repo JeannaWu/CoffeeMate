@@ -1,0 +1,42 @@
+<div class="jumbotron text-center">
+    <h1>Update Coffee!</h1>
+
+    <p>{{ message }}</p>
+
+    <div ng-controller="updateController">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <form ng-submit="updateCoffee()"
+                      style="margin-top:30px;">
+                    <h5>Coffee Name</h5>
+                    <div class="form-group" align="center">
+                        <input type="string"
+                               class="form-control"
+                               placeholder="Name"
+                               ng-model="formData.name"
+
+                        />
+                    </div>
+                    <h5>Coffee Shop</h5>
+                    <div class="form-group" align="center">
+                        <input type="string"
+                               class="form-control"
+                               placeholder="Shop"
+                               ng-model="formData.shop"
+                        />
+                    </div>
+                    <h5>Coffee Price</h5>
+                    <div class="form-group" align="center">
+                        <input type="number"
+                               class="form-control"
+                               placeholder="Amount"
+                               ng-model="formData.amount"
+                               ng-style="{'width': 100 + 'px'}"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Coffee</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
